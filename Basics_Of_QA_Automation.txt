@@ -1,0 +1,41 @@
+Setting a Foundation for Test Automation
+
+Test Automation is s/w development
+
+It's mainly used to
+	Reduce regression test cycle
+	Reduce Technical Debt
+	Enable continuous Testing
+
+Dev+Tester = Automation Engineer
+
+Majorly automation tests consist of: Interaction + Validation
+
+Interaction can be done 3 ways: Unit, Servie and UI
+	• Unit test
+		- testing usually done by the developer after implementing the feature
+		- resides with the production code
+		- should be written in the same language as the production code
+	• Service test
+		- non-UI level test where we call backend apis to see if we get the expected results or not
+		- should be written in a language that supports service calls such as sending and receiving HTTP requests and reading responses.
+	• UI test
+		- we try to implement a series of step which an end user would while using the application
+		- use a tool which supports the programming language in which our app is developed
+		- it's more susceptible to failure, we should try to use them as little as possible
+		- avoid redundancy of steps whenever possible. 
+
+For Validation there are various libraries like nunit, junit, TestNG, etc. which we will discuss later
+
+To utilize the automation benefits our Test suite should be capable of running in parallel
+	and no test should depend on each other
+
+Design patterns beneficial for test automation projects are:
+
+Page Object Model
+Screenplay
+Fluent
+Builder
+Singleton
+Factory
+Facade
