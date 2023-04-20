@@ -1,6 +1,6 @@
-Setting a Foundation for Test Automation
+				Setting a Foundation for Test Automation
 
-Test Automation is s/w development
+Test Automation is a type of s/w development
 
 It's mainly used to
 	Reduce regression test cycle
@@ -11,7 +11,7 @@ Dev+Tester = Automation Engineer
 
 Majorly automation tests consist of: Interaction + Validation
 
-Interaction can be done 3 ways: Unit, Servie and UI
+Interaction can be done in 3 ways: Unit, Servie and UI
 	• Unit test
 		- testing usually done by the developer after implementing the feature
 		- resides with the production code
@@ -27,8 +27,8 @@ Interaction can be done 3 ways: Unit, Servie and UI
 
 For Validation there are various libraries like nunit, junit, TestNG, etc. which we will discuss later
 
-To utilize the automation benefits our Test suite should be capable of running in parallel
-	and no test should depend on each other
+To utilize the automation benefits our Test suite should be capable of running tests in parallel
+and no test should depend on each other
 
 Design patterns beneficial for test automation projects are:
 
