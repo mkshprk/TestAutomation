@@ -1,0 +1,24 @@
+		Intro to JS
+
+Variables: We use camel cases(camelCase)
+	let
+	const
+		
+
+Data Types
+	string: surround value inside single-quotes(''),double-quotes("") or backticks(``)
+			let example1 = "I am a string using double-quotes";
+			let example2 = 'I am a string using single-quotes';
+			let example3 = `I am a string using backticks which computes the value at runtime ${1 + 2}`;
+	number: represents both integer and floating point.
+	boolean: in general naming convention for bool starts with either is or has
+		let isTrue = true;
+		let hasTrue = false;
+	undefined: default value of any declared variable, means no value assigned yet
+			let name; //it's value will be undefined
+	null: means we are clearing the value from variable
+
+
+
+
+	
