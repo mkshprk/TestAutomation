@@ -1,6 +1,7 @@
 		Intro to JS
 
-Variables: We use camel cases(camelCase)
+Variables: We use camel cases(camelCase) to name
+	   are like containers in the memory which store values and an be referred
 	let
 	const
 		
@@ -18,7 +19,146 @@ Data Types
 			let name; //it's value will be undefined
 	null: means we are clearing the value from variable
 
+Arrays
+	problem with other variables is that they store only one value so to contain multiple values in one variable we need Arrays
+	let example1 = ["Array", "Example",45 ,"can store multiple data types"];
+	Adding values can be done
+		while creating the array as shown in example1
+		after creation
+			example1.push("Added value at the last post creation step.");
+	Removing value
+		example1.pop(); // returns the last element and removes it from the array
+	Retrieving values
+		let index = 0;
+		example1[index]; // value of index starts from 0 to array.length-1, if we try to fetch out of bound value then we get undefined
 
+Funtions
+	help us organize the code
+		for readability
+		allows reusability thus avoiding code duplicacy
+		
+		function sum(a, b) {
+			return a + b;
+		}
+		console.log(sum(5,6)); //11
+		console.log(sum(9,6)); //15
+	There are two form of functions
+		Anonymous functions: 
+			we dont't provide a function name
+			it's generally used where we want to have some logic or behavior happen after a certain event
+				In below we want to print message after 2 seconds are over
+			setTimeout(function() {
+				console.log("Time Over !!!);
+			}, 2000);
+		Arrow functions: 
+			we don't need a function keyword
+			
+			setTimeout(() => {
+				console.log("Time Over !!!);
+			}, 2000);
 
+Objects
+	These data types allows us to describe things a lot of details
+		details are called as properties
+	We can create objects in 2 ways
+		Object literals
+			const user = {};
+			const userWithProps = {
+				name: "user name",
+				"Full name": "to use space in prop name",
+				doWork: function() {console.log("I Work");}
+				
+			};
+				To access
+					console.log(userWithProps.name);
+					console.log(userWithProps["Full name"]); // case of key should match
+					doWork();
+				To set
+					userWithProps.name = "Assigning new name";
+					userWithProps.doWork = function () {
+					  console.log("From runtime");
+					};
+		classes
+			class User {
+				constructor(name, fullName) {
+					this.name = name; 
+					this.fullName = fullName;
+				}
+				doWork() {console.log("I Work");}
+			}
+			const user = new User("name", "Full Name");
+				To access
+					console.log(user.name);
+	NOTE: Object literals are great for representing unique structures but when we need to repeat that structure Classes are better.
+
+Conditionals
+	1). IF-ELSE
+	function IsValidVoter(age) {
+  		if (age <= 0) {
+    			console.log("Enter a valid age !!!");
+  		} else if (age < 18) {
+    			console.log("Not a valid age to vote.");
+  		} else {
+    			console.log("Welcome");
+  		}
+	}
+
+	2). Switch
+Loops: To repeat some line of code multiple times
+	1). For: repeat code for a set of time
+
+	const forLoop = () => {
+	  for (let i = 0; i < 10; i++) {
+	    console.log(i);
+	  }
+	};
+
+	forLoop();
+
+	2).while: we don't know the number of times but know when to stop
+
+	const whileLoop = () => {
+  	let i = 5;
+  	while (i > 0) {
+    		console.log(i);
+    		i--;
+  		}
+	};
+
+	whileLoop();
+
+	3). Do-While: we don't know the number of times but know when to stop and want the loop to execute atleast once
+	
+	function doWhile() {
+  		let password = "";
+  		const correctPassword = "pwd";
+
+		  do {
+		    password = prompt("Enter password");
+		  } while (correctPassword !== password);
+
+		  alert("Welcome !!!");
+	}
+	
+	function doWhile_Fact(num) {
+  		let fact = 1;
+  		let original = num;
+
+  		do {
+    			fact *= num--;
+  		   } while (num > 0);
+
+		  console.log(`Factorial of ${original} is: ${fact}`);
+	}
+
+	doWhile_Fact(5); // Factorial of 5 is: 120
+	//doWhile();
 
 	
+
+!= is not Equal
+!== is strict not Equal
+== is equality check
+=== is strict equality check
+&& is AND
+|| is OR
